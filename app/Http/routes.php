@@ -9,8 +9,8 @@
 | It's a breeze. Simply tell Laravel the URIs it should respond to
 | and give it the controller to call when that URI is requested.
 |
-*/
+ */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CloudinaryController@index');
+Route::post('/', 'CloudinaryController@upload');
+Route::get('/{namafile}', 'CloudinaryController@hasil');
