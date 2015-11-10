@@ -28,9 +28,9 @@ class CloudinaryController extends Controller {
 		 * api_secret
 		 */
 		\Cloudinary::config(array(
-			"cloud_name" => "pandanesia",
-			"api_key" => "223893722764796",
-			"api_secret" => "-e5oDLDO9PRNkQJ6cqg5sRT05zY",
+			"cloud_name" => "cloudname",
+			"api_key" => "",
+			"api_secret" => "",
 		));
 	}
 
@@ -57,6 +57,10 @@ class CloudinaryController extends Controller {
 		return redirect()->to($nama_file);
 	}
 
+	/**
+	 * Display image after upload
+	 * @var namafile
+	 */
 	public function hasil($namafile) {
 		$data = array(
 			'url_gambar' => \Cloudinary::cloudinary_url($namafile),
